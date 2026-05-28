@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Trading Platform</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#020617;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    background:#020617;
+    border-bottom:1px solid #1e293b;
+    z-index:999;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#3b82f6;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#94a3b8;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:15px 35px;
+    background:#2563eb;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
+
+/* FEATURES */
+
+.features{
+    padding:100px 20px;
+}
+
+.features-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.features-title h2{
+    font-size:40px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#0f172a;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#94a3b8;
+    line-height:1.6;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    padding:100px 20px;
+    background:#0f172a;
+}
+
+.dashboard-box{
+    max-width:900px;
+    margin:auto;
+    background:#020617;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #1e293b;
+}
+
+.dashboard-box h2{
+    margin-bottom:20px;
+}
+
+.signal{
+    background:#111827;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.buy{
+    color:#22c55e;
+}
+
+.sell{
+    color:#ef4444;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#64748b;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    nav{
+        padding:20px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">AI TRADE</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>AI Trading Signal Platform</h1>
+
+        <p>
+            Platform AI modern untuk analisa market realtime,
+            signal trading otomatis, dashboard AI,
+            dan integrasi Firebase + Railway + MT5.
+        </p>
+
+        <button class="btn" onclick="scrollToDashboard()">
+            Get Started
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features" id="features">
+
+    <div class="features-title">
+        <h2>Platform Features</h2>
+    </div>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Realtime Signal</h3>
+            <p>
+                Analisa market otomatis menggunakan AI dan data realtime.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>AI Analysis</h3>
+            <p>
+                AI membaca trend market dan menghasilkan keputusan trading.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>MT5 Integration</h3>
+            <p>
+                Hubungkan MetaTrader 5 dengan backend AI secara otomatis.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Deploy</h3>
+            <p>
+                Deploy otomatis menggunakan Railway dan GitHub Actions.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="dashboard-box">
+
+        <h2>Trading Dashboard</h2>
+
+        <div class="signal">
+            <h3>XAUUSD</h3>
+            <p class="buy">BUY SIGNAL</p>
+        </div>
+
+        <div class="signal">
+            <h3>EURUSD</h3>
+            <p class="sell">SELL SIGNAL</p>
+        </div>
+
+        <div class="signal">
+            <h3>BTCUSD</h3>
+            <p class="buy">BUY SIGNAL</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    AI Trading Platform © 2026
+</footer>
+
+<script>
+
+function scrollToDashboard(){
+    document.getElementById("dashboard")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
